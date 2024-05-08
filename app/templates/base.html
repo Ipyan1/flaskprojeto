@@ -1,0 +1,21 @@
+<!DOCTYPE html> <!--cara que serve de modelo para todos as paginas html-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{titulo}}</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/estilo.css')}}">
+</head>
+<body>
+  <nav>
+    <a href="/index">Página Inicial</a>
+    <a href="/contato">Contatos</a>
+  </nav>
+  <h1>Bem-Vindo! {{nome}}</h1>
+
+  {% block conteudo %}
+  {% endblock %}
+
+  <footer>Desenvolvido por {{nome}}</footer>
+
+</body>
+</html>
