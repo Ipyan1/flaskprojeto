@@ -1,3 +1,28 @@
 body{
-    background-color: #fff122;
+    background-color: #adb5bd;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #01080e;
+  color: #dadde0;
+  padding: 50px 0 0 50px;
+  font-size: 2rem;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+}
+
+.item {
+  border: 1px solid #00f4bf;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: normal;
 }
