@@ -15,9 +15,15 @@ body {
   font-size: 2rem;
 }
 
-.nav {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+li {
+  display: inline;
+
+}
+ul{
+    background-color: #0000
+}
+.#{
+    text-decoration: none;
 }
 
 .item {
