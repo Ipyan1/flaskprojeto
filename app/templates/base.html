@@ -11,31 +11,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <body>
   <nav class="text-center">
-    <ul>
-      <li><a href="/index">Página Inicial</a></li>
-      <li><a href="/maisqueespeciais">Mais que Especiais</a></li>
-      <li><a href="/buque">Buquê de Flores</a></li>
-      <li><a href="/cestas">Cestas</a></li>
-      <li><a href="/encantadas">Encantadas</a></li>
-      <li><a href="/contato">Contatos</a></li>
-    <ul>
-   </nav>
+      <h6 style="word-spacing: 10px;">
+        <ul>
+          <li><a href="/index"> Página Inicial</a></li>
+          <li><a href="/maisqueespeciais"> Mais que Especiais</a></li>
+          <li><a href="/buque"> Buquê de Flores</a></li>
+          <li><a href="/cestas"> Cestas</a></li>
+          <li><a href="/encantadas"> Encantadas</a></li>
+          <li><a href="/contato"> Contatos</a></li>
+          <li><a href="/cadastrar"> Cadastrar Usuários</a></li>
+        <ul>
+      </h6>
+  </nav>
+
   <section class="text-center" id="bem vindos">
-    <h1>Bem Vindos a Floricultura {{nome}}</h1>
+    <h1>Bem Vindos a Floricultura da {{nome}}</h1>
       <ul></ul>
-  </section>
-    {% block conteudo %}
+  {% block conteudo %}
   {% endblock %}
 
 
 
-
 <section id="fechamento" class="inicial">
+    <h5>Maiores informações entre em contato pelo nosso WhatsApp. </h5>
+    <p> WhatsApp 11 95566-7788 </p>
+</section>
 
-    <h5>Para maiores informações. </h5>
-    <p>11 95566-7788</p>
 
 <footer class="text-center bg-dark text-white text-center position-fixed bottom-0 w-100 py-2"> Desenvolvido por {{nome}}</footer>
-
 </body>
 </html>

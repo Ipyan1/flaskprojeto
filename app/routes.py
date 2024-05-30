@@ -1,12 +1,11 @@
 import requests
-
 from app import app
 from flask import render_template
 from flask import request
 import json
 import requests
-link ="https://flaskti18n-e3938-default-rtdb.firebaseio.com/"
-@app.route('/')# Configurando uma rota web
+link = "https://flaskti18n-default-rtdb.firebaseio.com/" #Conecta o banco
+@app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html', titulo="Página Inicial", nome="Pâmela")
@@ -31,7 +30,7 @@ def cestas():
 def encantadas():
     return render_template('encantadas.html', titulo="Encantadas", nome="Pâmela")
 
-@app.route('/cadastro')
+@app.route('/cadastrar')
 def cadastrar():
     return render_template('cadastro.html', titulo='cadastro')
 
@@ -56,38 +55,3 @@ def listarTudo():
 
     except Exception as e:
         return f'Ocorreu um erro\n\n = {e}'
-
-@app.route('/listarIndividual')
-def listarIndividual():
-    try:
-        requisicao = requests.get(f'{link}/cadastrar/.json')
-        dicionario = requests.json()
-        idCadastro = ""
-        for codigo in dicionario:
-        usuario= dicionario[codigo]['cpf']
-            if(cpf="1231"):
-            idCadastro = codigo
-    except Exception as e:
-        return f'Ocorreu um erro\n\n = {e}'
-
-     #id para copiar para atualizar
-@app.route('/atualizar')
-def atualizar():
-    try:
-        dados = {"nome": "Gabriel"}#Parâmetro para atualização
-        requesicao = requests.patch(f'{link}/cadastrar/-#colocar oid/json', data=json.dumps(dados))
-        return 'Cadastro realizado com sucesso!'
-    except Exception as e:
-        return f'Ocorreu um erro\n\n = {e}'
-
-@app.route('/excluir')
-def excluir():
-    try:
-        requisicao = requests.delete(f'{link}/cadastrar/ # colocar o id/json')
-        return ' Excluido com Sucesso!'
-    except Exception as e:
-        return f'Houve um erro\n\n = {e}'
-
-
-
-
